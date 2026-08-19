@@ -2,7 +2,7 @@
 session_start();
 require('includes/auth_check.php');
 
-$page_title = "Log a loan | Gear Out";
+$page_title = "Manage your reservations | Frenchichi";
 
 // If save_loan.php redirected back here with errors, read them once.
 $errors = $_SESSION['borrow_errors'] ?? [];
@@ -16,7 +16,7 @@ include('includes/nav.php');
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
-            <h2 class="pt-5">Log a loan</h2>
+            <h2 class="pt-5">Create a reservation</h2>
 
             <?php if ($errors): ?>
             <div class="alert alert-danger" role="alert">
@@ -44,7 +44,7 @@ include('includes/nav.php');
                     <input type="date" class="form-control" id="due_back" name="due_back"
                            value="<?= htmlspecialchars($old['due_back'] ?? '') ?>">
                 </div>
-                <button type="submit" class="btn btn-primary">Log loan</button>
+                <button type="submit" class="btn btn-primary">Log reservation</button>
             </form>
         </div>
         <div class="col-sm-3"></div>

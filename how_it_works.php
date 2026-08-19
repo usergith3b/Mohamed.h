@@ -7,18 +7,17 @@ include('includes/nav.php');
 <!-- Start of content 1 -->
 <div class="container pt-5">
     <div class="row">
-        <h1 class="text-center">How Gear Out works</h1>
+        <h1 class="text-center">How Frenchichi works</h1>
         <hr />
         <h3 class="pt-5">The problem</h3>
         <p>
-            The PE department currently tracks lunchtime sports gear on a paper sign-out sheet taped to the
-            equipment shed window. It's hard to read, sheets go missing at the end of term, and nobody can
-            tell at a glance what's still out or who's had it longest.
+            The Frenchichi resturent needed help with how they would manage their reservations.
+            This is why they have created this website, in order to help customers who are willing to pay for a reservations.
+            This website helps
         </p>
         <h3 class="pt-4">Who it's for</h3>
         <p>
-            Student sports monitors issue and return gear at the shed window each lunchtime. PE staff need to
-            check what's outstanding without walking to the shed.
+            This webstie is for customers of all type
         </p>
         <h3 class="pt-4">What it does</h3>
         <ul>
