@@ -3,7 +3,7 @@ session_start();
 require('includes/auth_check.php');
 require('includes/conn_1dt.php');
 
-$page_title = "Manage loans | Gear Out";
+$page_title = "Manage reservations | Gear Out";
 
 // Join to monitors so we can show who logged each loan.
 $stmt = $pdo->query(

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$page_title = "Current loans | Gear Out";
+$page_title = "Current reservations | Gear Out";
 require('includes/conn_1dt.php');
 
 // Anyone can see this page — no auth_check here. Only logging or
@@ -16,10 +16,10 @@ include('includes/nav.php');
     <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
-            <h1 class="pt-5 pb-4 text-center">Current loans</h1>
+            <h1 class="pt-5 pb-4 text-center">Current reservations</h1>
 
             <?php if (!$loans): ?>
-                <p class="text-center">Nothing is currently out.</p>
+                <p class="text-center">Nothing is currently reserved.</p>
             <?php else: ?>
                 <div class="pb-4">
                     <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">

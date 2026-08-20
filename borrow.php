@@ -44,7 +44,7 @@ include('includes/nav.php');
                     <input type="date" class="form-control" id="due_back" name="due_back"
                            value="<?= htmlspecialchars($old['due_back'] ?? '') ?>">
                 </div>
-                <button type="submit" class="btn btn-primary">Log reservation</button>
+                <button type="submit" class="btn btn-primary">Make a reservation</button>
             </form>
         </div>
         <div class="col-sm-3"></div>
