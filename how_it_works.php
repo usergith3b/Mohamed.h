@@ -17,15 +17,16 @@ include('includes/nav.php');
         </p>
         <h3 class="pt-4">Who it's for</h3>
         <p>
-            This webstie is for customers of all type
+            People who work for the restaurant, and need to keep track of reservations and table availability. 
+            This includes the restaurant manager, host/hostess, and waitstaff. 
+            The website is also useful for customers who want to make a reservation online.
         </p>
         <h3 class="pt-4">What it does</h3>
         <ul>
-            <li>Lets a signed-in monitor log a loan — item, borrower, and due-back date</li>
-            <li>Shows anyone, monitor or staff, a live public list of what's currently out</li>
-            <li>Flags anything overdue</li>
-            <li>Lets a monitor mark gear as returned, or correct a mistaken entry</li>
-        </ul>
+            <li>Lets a signed-in customer log a reservation — table, date, and time</li>
+            <li>Shows anyone, monitor or staff, a live public list of what's currently available</li>
+            <li>Flags any reservations that are overdue</li>
+            <li>Lets a monitor mark a reservation as completed, or correct a mistaken entry</li>
     </div>
 </div>
 
