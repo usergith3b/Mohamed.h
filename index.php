@@ -44,7 +44,7 @@ include('includes/nav.php');
                 <div class="card-body d-flex flex-column">
                     <i class="fa-solid fa-user-shield fa-3x mb-3"></i>
                     <h5 class="card-title"><?php echo isset($_SESSION['id']) ? 'Control panel' : ' login'; ?></h5>
-                    <p class="card-text">Log a loan, or mark equipment as returned.</p>
+                    <p class="card-text">Make a reservation, or mark them as completed.</p>
                     <a class="mt-auto" href="<?php echo isset($_SESSION['id']) ? 'control_panel.php' : 'login.php'; ?>">
                         <button type="button" class="btn btn-danger btn-lg"><?php echo isset($_SESSION['id']) ? 'Open' : 'Log in'; ?></button>
                     </a>
