@@ -23,7 +23,7 @@ include('includes/nav.php');
             <div class="card text-center h-100">
                 <div class="card-body d-flex flex-column">
                     <i class="fa-solid fa-circle-info fa-3x mb-3"></i>
-                    <h5 class="card-title">How it works</h5>
+                    <h5 class="card-title">About us</h5>
                     <p class="card-text">Who Frenchichi is for, and what problem it solves.</p>
                     <a class="mt-auto" href="how_it_works.php"><button type="button" class="btn btn-danger btn-lg">Learn more</button></a>
                 </div>

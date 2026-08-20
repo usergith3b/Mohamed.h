@@ -7,7 +7,7 @@ include('includes/nav.php');
 <!-- Start of content 1 -->
 <div class="container pt-5">
     <div class="row">
-        <h1 class="text-center">How Frenchichi works</h1>
+        <h1 class="text-center">About Frenchichi</h1>
         <hr />
         <h3 class="pt-5">The problem</h3>
         <p>

@@ -12,7 +12,7 @@
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="how_it_works.php">How it works</a>
+                    <a class="nav-link" href="how_it_works.php">About us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="view_loans.php">Current Reservation</a>
