@@ -1,10 +1,10 @@
 <?php
 session_start();
-$page_title = "Current reservations | Gear Out";
+$page_title = "Current reservations | Frenchichi";
 require('includes/conn_1dt.php');
 
 // Anyone can see this page — no auth_check here. Only logging or
-// returning a loan requires being signed in.
+// returning a reservation requires being signed in.
 $stmt = $pdo->query("SELECT * FROM loans WHERE returned_date IS NULL ORDER BY due_back ASC");
 $loans = $stmt->fetchAll();
 $today = date('Y-m-d');

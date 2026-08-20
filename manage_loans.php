@@ -3,9 +3,9 @@ session_start();
 require('includes/auth_check.php');
 require('includes/conn_1dt.php');
 
-$page_title = "Manage reservations | Gear Out";
+$page_title = "Manage reservations | Frenchichi";
 
-// Join to monitors so we can show who logged each loan.
+// Join to monitors so we can show who logged each reservation.
 $stmt = $pdo->query(
     "SELECT loans.*, CONCAT(monitors.firstname, ' ', LEFT(monitors.lastname, 1), '.') AS logged_by_name 
      FROM loans
@@ -35,11 +35,11 @@ include('includes/nav.php');
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
             <div class="d-flex justify-content-between align-items-center pt-5 pb-4">
-                <h1 class="mb-0">Manage loans</h1>
-                <a href="borrow.php"><button class="btn btn-danger">Log a new loan</button></a>
+                <h1 class="mb-0">Manage reservations</h1>
+                <a href="borrow.php"><button class="btn btn-danger">Log a new reservation</button></a>
             </div>
 
-            <?php if (isset($_GET['logged'])): ?><div class="alert alert-success">Loan logged.</div><?php endif; ?>
+            <?php if (isset($_GET['logged'])): ?><div class="alert alert-success">Reservation logged.</div><?php endif; ?>
             <?php if (isset($_GET['returned'])): ?><div class="alert alert-success">Marked as returned.</div><?php endif; ?>
             <?php if (isset($_GET['deleted'])): ?><div class="alert alert-success">Entry deleted.</div><?php endif; ?>
 
@@ -48,7 +48,7 @@ include('includes/nav.php');
                     <div class="card">
                         <div class="card-body">
                             <h3 class="mb-0"><?= (int) $summary['total_out'] ?></h3>
-                            <p class="text-muted mb-0">Currently out</p>
+                            <p class="text-muted mb-0">Currently reserved</p>
                         </div>
                     </div>
                 </div>
