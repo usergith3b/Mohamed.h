@@ -25,6 +25,22 @@ body {
     object-fit: cover;
 }
 
+.carousel {
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-item img {
+    height: 360px;
+    object-fit: cover;
+}
+
+@media (max-width: 576px) {
+    .carousel-item img {
+        height: 240px;
+    }
+}
+
 .card-title {
     font-weight: 600;
 }

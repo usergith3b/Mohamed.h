@@ -16,6 +16,9 @@ include('includes/nav.php');
         </div>
     </div>
 </div>
+<div class="container pt-4">
+    <?php include('includes/carousel.php'); ?>
+</div>
 <!-- Start of cards -->
 <div class="container pt-5">
     <div class="row row-cols-1 row-cols-md-3 g-4">

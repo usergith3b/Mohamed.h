@@ -9,6 +9,9 @@ include('includes/nav.php');
     <div class="row">
         <h1 class="text-center">About Frenchichi</h1>
         <hr />
+        <div class="col-12 mb-4">
+            <?php include('includes/carousel.php'); ?>
+        </div>
         <h3 class="pt-5">The problem</h3>
         <p>
             The Frenchichi resturent needed help with how they would manage their reservations.
