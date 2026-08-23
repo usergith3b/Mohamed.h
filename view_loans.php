@@ -1,10 +1,10 @@
 <?php
 session_start();
-$page_title = "Current loans | Gear Out";
+$page_title = "Current reservations | Frenchichi";
 require('includes/conn_1dt.php');
 
 // Anyone can see this page — no auth_check here. Only logging or
-// returning a loan requires being signed in.
+// returning a reservation requires being signed in.
 $stmt = $pdo->query("SELECT * FROM loans WHERE returned_date IS NULL ORDER BY due_back ASC");
 $loans = $stmt->fetchAll();
 $today = date('Y-m-d');
@@ -16,10 +16,10 @@ include('includes/nav.php');
     <div class="row">
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
-            <h1 class="pt-5 pb-4 text-center">Current loans</h1>
+            <h1 class="pt-5 pb-4 text-center">Current reservations</h1>
 
             <?php if (!$loans): ?>
-                <p class="text-center">No items are currently out.</p>
+                <p class="text-center">Nothing is currently reserved.</p>
             <?php else: ?>
                 <div class="pb-4">
                     <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
@@ -27,9 +27,9 @@ include('includes/nav.php');
                 <table class="table table-hover" id="myTable">
                     <thead>
                         <tr>
-                            <th scope="col">Item</th>
+                            <th scope="col">Table</th>
                             <th scope="col">Borrower</th>
-                            <th scope="col">Due back</th>
+                            <th scope="col">Reservation date</th>
                             <th scope="col">Status</th>
                         </tr>
                     </thead>

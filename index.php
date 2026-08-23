@@ -1,7 +1,7 @@
 <?php
 session_start();
 // Declare variable
-$page_title = "Gear Out | Home";
+$page_title = "Frenchichi | Home";
 // Call files
 include('includes/header.php');
 include('includes/nav.php');
@@ -10,9 +10,9 @@ include('includes/nav.php');
 <div class="container text-center pt-5">
     <div class="row align-items-start">
         <div class="col">
-            <h1>Gear Out</h1>
-            <p class="lead">A simple equipment loan management system for keeping track of items and borrowers.</p>
-            <p class="text-muted">See which items are currently out and manage loans with ease.</p>
+            <h1>Frenchichi </h1>
+            <p class="lead">A simple online restaurant management system. Which helps you manage your restaurant efficiently.</p>
+            <p class="text-muted">See what reservations are available and manage them with ease.</p>
         </div>
     </div>
 </div>
@@ -27,7 +27,7 @@ include('includes/nav.php');
                 <div class="card-body d-flex flex-column">
                     <i class="fa-solid fa-circle-info fa-3x mb-3"></i>
                     <h5 class="card-title">About us</h5>
-                    <p class="card-text">Learn how Gear Out helps monitor equipment loans.</p>
+                    <p class="card-text">Who Frenchichi is for, and what problem it solves.</p>
                     <a class="mt-auto" href="how_it_works.php"><button type="button" class="btn btn-danger btn-lg">Learn more</button></a>
                 </div>
             </div>
@@ -36,8 +36,8 @@ include('includes/nav.php');
             <div class="card text-center h-100">
                 <div class="card-body d-flex flex-column">
                     <i class="fa-solid fa-list-check fa-3x mb-3"></i>
-                    <h5 class="card-title">Current loans</h5>
-                    <p class="card-text">See which items are currently out and which are overdue.</p>
+                    <h5 class="card-title">Current reservations</h5>
+                    <p class="card-text">See what's tables are avlible right now, and what's overdue.</p>
                     <a class="mt-auto" href="view_loans.php"><button type="button" class="btn btn-danger btn-lg">View loans</button></a>
                 </div>
             </div>
@@ -47,7 +47,7 @@ include('includes/nav.php');
                 <div class="card-body d-flex flex-column">
                     <i class="fa-solid fa-user-shield fa-3x mb-3"></i>
                     <h5 class="card-title"><?php echo isset($_SESSION['id']) ? 'Control panel' : ' login'; ?></h5>
-                    <p class="card-text">Log a loan or mark an item as returned.</p>
+                    <p class="card-text">Make a reservation, or mark them as completed.</p>
                     <a class="mt-auto" href="<?php echo isset($_SESSION['id']) ? 'control_panel.php' : 'login.php'; ?>">
                         <button type="button" class="btn btn-danger btn-lg"><?php echo isset($_SESSION['id']) ? 'Open' : 'Log in'; ?></button>
                     </a>
