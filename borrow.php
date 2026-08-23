@@ -2,7 +2,7 @@
 session_start();
 require('includes/auth_check.php');
 
-$page_title = "Manage your reservations | Frenchichi";
+$page_title = "Log a loan | Gear Out";
 
 // If save_loan.php redirected back here with errors, read them once.
 $errors = $_SESSION['borrow_errors'] ?? [];
@@ -16,7 +16,7 @@ include('includes/nav.php');
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
-            <h2 class="pt-5">Create a reservation</h2>
+            <h2 class="pt-5">Log a loan</h2>
 
             <?php if ($errors): ?>
             <div class="alert alert-danger" role="alert">
@@ -30,15 +30,9 @@ include('includes/nav.php');
 
             <form action="save_loan.php" method="POST">
                 <div class="mb-3">
-                    <label for="table_number" class="form-label">Table</label>
-                    <select class="form-select" id="table_number" name="table_number" required>
-                        <option value="">Choose a table</option>
-                        <?php for ($table = 1; $table <= 16; $table++): ?>
-                            <option value="<?= $table ?>" <?= ($old['table_number'] ?? '') == $table ? 'selected' : '' ?>>
-                                Table <?= $table ?>
-                            </option>
-                        <?php endfor; ?>
-                    </select>
+                    <label for="item_name" class="form-label">Item</label>
+                    <input type="text" class="form-control" id="item_name" name="item_name"
+                           value="<?= htmlspecialchars($old['item_name'] ?? '') ?>" required>
                 </div>
                 <div class="mb-3">
                     <label for="borrower_name" class="form-label">Borrower</label>
@@ -46,11 +40,11 @@ include('includes/nav.php');
                            value="<?= htmlspecialchars($old['borrower_name'] ?? '') ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="due_back" class="form-label">Reservation date</label>
+                    <label for="due_back" class="form-label">Due back</label>
                     <input type="date" class="form-control" id="due_back" name="due_back"
                            value="<?= htmlspecialchars($old['due_back'] ?? '') ?>">
                 </div>
-                <button type="submit" class="btn btn-primary">Make a reservation</button>
+                <button type="submit" class="btn btn-primary">Log loan</button>
             </form>
         </div>
         <div class="col-sm-3"></div>

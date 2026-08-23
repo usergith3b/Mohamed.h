@@ -1,6 +1,6 @@
 <?php
 session_start();
-$page_title = "Monitor login | Frenchichi";
+$page_title = "Monitor login | Gear Out";
 include('includes/header.php');
 include('includes/nav.php');
 ?>

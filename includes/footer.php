@@ -1,6 +1,6 @@
 <footer class="site-footer mt-5 text-center">
     <div class="card-footer text-body-secondary py-3">
-        Frenchichi — Resturent reservation system
+        Gear Out - Equipment loan system
     </div>
 </footer>
 

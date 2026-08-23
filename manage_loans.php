@@ -3,9 +3,9 @@ session_start();
 require('includes/auth_check.php');
 require('includes/conn_1dt.php');
 
-$page_title = "Manage reservations | Frenchichi";
+$page_title = "Manage loans | Gear Out";
 
-// Join to monitors so we can show who logged each reservation.
+// Join to monitors so we can show who logged each loan.
 $stmt = $pdo->query(
     "SELECT loans.*, CONCAT(monitors.firstname, ' ', LEFT(monitors.lastname, 1), '.') AS logged_by_name 
      FROM loans
@@ -35,12 +35,12 @@ include('includes/nav.php');
         <div class="col-sm-1"></div>
         <div class="col-sm-10">
             <div class="d-flex justify-content-between align-items-center pt-5 pb-4">
-                <h1 class="mb-0">Manage reservations</h1>
-                <a href="borrow.php"><button class="btn btn-danger">Log a new reservation</button></a>
+                <h1 class="mb-0">Manage loans</h1>
+                <a href="borrow.php"><button class="btn btn-danger">Log a new loan</button></a>
             </div>
 
-            <?php if (isset($_GET['logged'])): ?><div class="alert alert-success">Reservation logged.</div><?php endif; ?>
-            <?php if (isset($_GET['returned'])): ?><div class="alert alert-success">Reservation marked as completed.</div><?php endif; ?>
+            <?php if (isset($_GET['logged'])): ?><div class="alert alert-success">Loan logged.</div><?php endif; ?>
+            <?php if (isset($_GET['returned'])): ?><div class="alert alert-success">Loan marked as returned.</div><?php endif; ?>
             <?php if (isset($_GET['deleted'])): ?><div class="alert alert-success">Entry deleted.</div><?php endif; ?>
 
             <div class="row text-center pb-4">
@@ -48,7 +48,7 @@ include('includes/nav.php');
                     <div class="card">
                         <div class="card-body">
                             <h3 class="mb-0"><?= (int) $summary['total_out'] ?></h3>
-                            <p class="text-muted mb-0">Currently reserved</p>
+                            <p class="text-muted mb-0">Currently out</p>
                         </div>
                     </div>
                 </div>
@@ -75,9 +75,9 @@ include('includes/nav.php');
             <div class="pb-4">
                 <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
                 <select class="form-select mt-2" id="columnSelect" onchange="myFunction()">
-                    <option value="0">Table</option>
+                    <option value="0">Item</option>
                     <option value="1">Borrower</option>
-                    <option value="2">Reservation date</option>
+                    <option value="2">Due back</option>
                     <option value="3">Status</option>
                 </select>
             </div>
@@ -85,9 +85,9 @@ include('includes/nav.php');
             <table class="table table-hover" id="myTable">
                 <thead>
                     <tr>
-                        <th scope="col">Table</th>
+                        <th scope="col">Item</th>
                         <th scope="col">Borrower</th>
-                        <th scope="col">Reservation date</th>
+                        <th scope="col">Due back</th>
                         <th scope="col">Status</th>
                         <th scope="col">Logged by</th>
                         <th scope="col">&nbsp;</th>
@@ -99,7 +99,7 @@ include('includes/nav.php');
                         <?php
                         $overdue = !$loan['returned_date'] && $loan['due_back'] < $today;
                         if ($loan['returned_date']) {
-                            $status = 'Completed ' . htmlspecialchars($loan['returned_date']);
+                            $status = 'Returned ' . htmlspecialchars($loan['returned_date']);
                         } elseif ($overdue) {
                             $status = '<span class="badge text-bg-danger">Overdue</span>';
                         } else {
@@ -115,7 +115,7 @@ include('includes/nav.php');
                             <td>
                                 <?php if (!$loan['returned_date']): ?>
                                 <a href="return_loan.php?id=<?= (int) $loan['id'] ?>">
-                                    <button type="button" class="btn btn-primary btn-sm">Mark completed</button>
+                                    <button type="button" class="btn btn-primary btn-sm">Mark returned</button>
                                 </a>
                                 <?php endif; ?>
                             </td>
