@@ -30,9 +30,15 @@ include('includes/nav.php');
 
             <form action="save_loan.php" method="POST">
                 <div class="mb-3">
-                    <label for="item_name" class="form-label">Item</label>
-                    <input type="text" class="form-control" id="item_name" name="item_name"
-                           value="<?= htmlspecialchars($old['item_name'] ?? '') ?>">
+                    <label for="table_number" class="form-label">Table</label>
+                    <select class="form-select" id="table_number" name="table_number" required>
+                        <option value="">Choose a table</option>
+                        <?php for ($table = 1; $table <= 16; $table++): ?>
+                            <option value="<?= $table ?>" <?= ($old['table_number'] ?? '') == $table ? 'selected' : '' ?>>
+                                Table <?= $table ?>
+                            </option>
+                        <?php endfor; ?>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="borrower_name" class="form-label">Borrower</label>

@@ -75,7 +75,7 @@ include('includes/nav.php');
             <div class="pb-4">
                 <input class="form-control" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search...">
                 <select class="form-select mt-2" id="columnSelect" onchange="myFunction()">
-                    <option value="0">Item</option>
+                    <option value="0">Table</option>
                     <option value="1">Borrower</option>
                     <option value="2">Reservation date</option>
                     <option value="3">Status</option>
@@ -85,7 +85,7 @@ include('includes/nav.php');
             <table class="table table-hover" id="myTable">
                 <thead>
                     <tr>
-                        <th scope="col">Item</th>
+                        <th scope="col">Table</th>
                         <th scope="col">Borrower</th>
                         <th scope="col">Reservation date</th>
                         <th scope="col">Status</th>
