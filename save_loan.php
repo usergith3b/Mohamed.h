@@ -21,7 +21,7 @@ if ($borrower === '') {
     $errors[] = 'Please enter a borrower name.';
 }
 if ($due === '' || $due < $today) {
-    $errors[] = 'Due back date must be today or later.';
+    $errors[] = 'Reservation date must be today or later.';
 }
 
 if ($errors) {

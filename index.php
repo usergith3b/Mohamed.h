@@ -21,6 +21,7 @@ include('includes/nav.php');
     <div class="row row-cols-1 row-cols-md-3 g-4">
         <div class="col">
             <div class="card text-center h-100">
+                <img class="card-image" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=80" alt="Warmly lit restaurant dining room">
                 <div class="card-body d-flex flex-column">
                     <i class="fa-solid fa-circle-info fa-3x mb-3"></i>
                     <h5 class="card-title">About us</h5>
@@ -31,6 +32,7 @@ include('includes/nav.php');
         </div>
         <div class="col">
             <div class="card text-center h-100">
+                <img class="card-image" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=900&q=80" alt="Fresh meal served on a restaurant table">
                 <div class="card-body d-flex flex-column">
                     <i class="fa-solid fa-list-check fa-3x mb-3"></i>
                     <h5 class="card-title">Current reservations</h5>
@@ -41,6 +43,7 @@ include('includes/nav.php');
         </div>
         <div class="col">
             <div class="card text-center h-100">
+                <img class="card-image" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80" alt="Restaurant staff preparing a dining table">
                 <div class="card-body d-flex flex-column">
                     <i class="fa-solid fa-user-shield fa-3x mb-3"></i>
                     <h5 class="card-title"><?php echo isset($_SESSION['id']) ? 'Control panel' : ' login'; ?></h5>

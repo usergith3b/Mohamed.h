@@ -7,7 +7,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav main-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
@@ -17,6 +17,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="view_loans.php">Current Reservation</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav account-nav ms-lg-auto">
                 <?php if (isset($_SESSION['id'])): ?>
                 <li class="nav-item">
                     <a class="nav-link" href="control_panel.php">Control panel</a>

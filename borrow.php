@@ -40,7 +40,7 @@ include('includes/nav.php');
                            value="<?= htmlspecialchars($old['borrower_name'] ?? '') ?>">
                 </div>
                 <div class="mb-3">
-                    <label for="due_back" class="form-label">Due back</label>
+                    <label for="due_back" class="form-label">Reservation date</label>
                     <input type="date" class="form-control" id="due_back" name="due_back"
                            value="<?= htmlspecialchars($old['due_back'] ?? '') ?>">
                 </div>

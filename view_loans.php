@@ -29,7 +29,7 @@ include('includes/nav.php');
                         <tr>
                             <th scope="col">Item</th>
                             <th scope="col">Borrower</th>
-                            <th scope="col">Due back</th>
+                            <th scope="col">Reservation date</th>
                             <th scope="col">Status</th>
                         </tr>
                     </thead>
