@@ -4,7 +4,7 @@ require('includes/auth_check.php');
 
 $page_title = "Manage your reservations | Frenchichi";
 
-// If save_loan.php redirected back here with errors, read them once.
+// If save_loans.php redirected back here with errors, read them once.
 $errors = $_SESSION['borrow_errors'] ?? [];
 $old    = $_SESSION['borrow_old'] ?? [];
 unset($_SESSION['borrow_errors'], $_SESSION['borrow_old']);
@@ -28,7 +28,7 @@ include('includes/nav.php');
             </div>
             <?php endif; ?>
 
-            <form action="save_loan.php" method="POST">
+            <form action="save_loans.php" method="POST">
                 <div class="mb-3">
                     <label for="table_number" class="form-label">Table</label>
                     <select class="form-select" id="table_number" name="table_number" required>

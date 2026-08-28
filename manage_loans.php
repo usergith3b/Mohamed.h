@@ -114,13 +114,13 @@ include('includes/nav.php');
                             <td><?= htmlspecialchars($loan['logged_by_name'] ?? '—') ?></td>
                             <td>
                                 <?php if (!$loan['returned_date']): ?>
-                                <a href="return_loan.php?id=<?= (int) $loan['id'] ?>">
+                                <a href="return_loans.php?id=<?= (int) $loan['id'] ?>">
                                     <button type="button" class="btn btn-primary btn-sm">Mark completed</button>
                                 </a>
                                 <?php endif; ?>
                             </td>
                             <td>
-                                <a href="delete_loan.php?id=<?= (int) $loan['id'] ?>"
+                                <a href="delete_loans.php?id=<?= (int) $loan['id'] ?>"
                                    onclick="return confirm('Delete this entry? This can\'t be undone.');">
                                     <button type="button" class="btn btn-danger btn-sm">Delete</button>
                                 </a>
