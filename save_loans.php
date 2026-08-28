@@ -24,6 +24,20 @@ if ($due === '' || $due < $today) {
     $errors[] = 'Reservation date must be today or later.';
 }
 
+if (!$errors) {
+    $stmt = $pdo->prepare(
+        'SELECT COUNT(*) FROM loans WHERE item_name = :item AND due_back = :due'
+    );
+    $stmt->execute([
+        ':item' => 'Table ' . $table,
+        ':due'  => $due,
+    ]);
+
+    if ((int) $stmt->fetchColumn() > 0) {
+        $errors[] = 'That table is already reserved for the selected date.';
+    }
+}
+
 if ($errors) {
     $_SESSION['borrow_errors'] = $errors;
     $_SESSION['borrow_old']    = ['table_number' => $_POST['table_number'] ?? '', 'borrower_name' => $borrower, 'due_back' => $due];

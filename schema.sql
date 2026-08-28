@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS loans (
     returned_date  DATE         NULL,      -- NULL = still out
     notes          VARCHAR(255) NULL,
     logged_by      INT          NULL,      -- which monitor logged it
+    UNIQUE KEY uq_loans_table_date (item_name, due_back),
     FOREIGN KEY (logged_by) REFERENCES monitors(id)
 );
 
